@@ -1,4 +1,5 @@
 ﻿using Challenges.WC1;
+using Challenges.WC2;
 
 namespace Challenges
 {
@@ -6,9 +7,8 @@ namespace Challenges
     {
         private static void Main()
         {
-            var c = new Loop();
-            c.Foreach();
-            c.Linq();
+            var c = new ReadAndWriteFile();
+            c.ReadFile();
         }
     }
 }
