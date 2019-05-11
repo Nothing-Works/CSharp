@@ -29,24 +29,11 @@ namespace Challenges.WC2
                 {
                     var property = user.GetType().GetProperty(headers[i]);
 
-                    var value = Convert.ChangeType(singleUser[i], property.PropertyType);
+                    var value = property.PropertyType == typeof(bool)
+                        ? Convert.ChangeType(Convert.ToInt32(singleUser[i]), property.PropertyType)
+                        : Convert.ChangeType(singleUser[i], property.PropertyType);
 
-
-                    if (property.PropertyType == typeof(bool))
-                    {
-                        var b = Convert.ToBoolean(Convert.ToInt32(singleUser[i]));
-                        property.SetValue(user, b);
-                    }
-
-                    else if (property.PropertyType == typeof(int))
-                    {
-                        var b = Convert.ToInt32(singleUser[i]);
-                        property.SetValue(user, b);
-                    }
-                    else
-                    {
-                        property.SetValue(user, singleUser[i]);
-                    }
+                    property.SetValue(user, value);
                 }
 
                 models.Add(user);
@@ -58,4 +45,3 @@ namespace Challenges.WC2
         }
     }
 }
-//                typeof(User).GetProperty(headers[0]).GetValue(yourInstance);
