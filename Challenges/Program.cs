@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Challenges.WC1;
 
 namespace Challenges
 {
-    internal class Program
+    public static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("Hello World!");
+            var c = new ForeachLoop();
+            c.Show();
         }
     }
 }
