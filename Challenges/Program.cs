@@ -6,8 +6,9 @@ namespace Challenges
     {
         private static void Main()
         {
-            var c = new ForeachLoop();
-            c.Show();
+            var c = new Loop();
+            c.Foreach();
+            c.Linq();
         }
     }
 }
