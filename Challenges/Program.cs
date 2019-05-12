@@ -9,6 +9,7 @@ namespace Challenges
         {
             var c = new ReadAndWriteFile();
             c.ReadFile();
+            c.PrintOut();
         }
     }
 }
