@@ -11,6 +11,14 @@ namespace Challenges.WC2
 
         private const string AdvancedPath = "./WC2/AdvancedDataSet.csv";
 
+        private readonly User _newUser = new User
+        {
+            Age = 12,
+            IsAlive = true,
+            FirstName = "Andy",
+            LastName = "Song"
+        };
+
         private readonly List<User> _usersModel = new List<User>();
 
         private List<string> _data = new List<string>();
@@ -25,6 +33,15 @@ namespace Challenges.WC2
             GetHeaders();
             GetUsers();
             MapToUserModel();
+        }
+
+        public void WriteFile()
+        {
+            GetHeaders();
+
+            var csvUser = _headers.Select(c => _newUser.GetType().GetProperty(c).GetValue(_newUser));
+
+            File.AppendAllText(StandardPath, Environment.NewLine + string.Join(",", csvUser));
         }
 
         public void PrintOut() => _usersModel.ForEach(c => Console.WriteLine(c.DisplayText));

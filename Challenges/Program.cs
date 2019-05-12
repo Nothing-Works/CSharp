@@ -1,5 +1,4 @@
-﻿using Challenges.WC1;
-using Challenges.WC2;
+﻿using Challenges.WC2;
 
 namespace Challenges
 {
@@ -10,6 +9,7 @@ namespace Challenges
             var c = new ReadAndWriteFile();
             c.ReadFile();
             c.PrintOut();
+            c.WriteFile();
         }
     }
 }

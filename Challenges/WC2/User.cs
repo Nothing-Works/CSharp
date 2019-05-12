@@ -2,10 +2,10 @@ namespace Challenges.WC2
 {
     public class User
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
-        public bool IsAlive { get; set; }
+        public string FirstName { private get; set; }
+        public string LastName { private get; set; }
+        public int Age { private get; set; }
+        public bool IsAlive { private get; set; }
 
         public string DisplayText
         {
