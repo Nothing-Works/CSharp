@@ -17,7 +17,7 @@ namespace Challenges.WC3
                 }
                 catch (NullReferenceException e)
                 {
-                    Console.WriteLine($"Null Value for item {i}");
+                    Console.WriteLine($"Null Value for item {i} {e.Message}");
                 }
                 catch (Exception e)
                 {
