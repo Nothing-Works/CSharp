@@ -7,9 +7,9 @@ namespace Challenges.WC2
 {
     public class ReadAndWriteFile
     {
-        private const string StandardPath = "./WC2/StandardDataSet.csv";
-
         private const string AdvancedPath = "./WC2/AdvancedDataSet.csv";
+
+        private const string StandardPath = "./WC2/StandardDataSet.csv";
 
         private readonly User _newUser = new User
         {
@@ -18,6 +18,7 @@ namespace Challenges.WC2
             FirstName = "Andy",
             LastName = "Song"
         };
+
 
         private readonly List<User> _usersModel = new List<User>();
 
