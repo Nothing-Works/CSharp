@@ -1,5 +1,4 @@
 ﻿using Challenges.WC2;
-using Challenges.WC3;
 
 namespace Challenges
 {
@@ -10,6 +9,8 @@ namespace Challenges
             var c = new ReadAndWriteFile();
             c.ReadFile();
             c.PrintOut();
+            c.WriteFile();
+            c.ReadFile();
         }
     }
 }

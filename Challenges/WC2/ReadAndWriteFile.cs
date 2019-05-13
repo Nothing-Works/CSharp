@@ -42,7 +42,10 @@ namespace Challenges.WC2
         {
             GetHeaders();
 
-            var csvUser = _headers.Select(c => _newUser.GetType().GetProperty(c).GetValue(_newUser));
+            var csvUser = _headers.Select(c =>
+                _newUser.GetType().GetProperty(c).PropertyType == typeof(bool)
+                    ? Convert.ToInt32(_newUser.GetType().GetProperty(c).GetValue(_newUser))
+                    : _newUser.GetType().GetProperty(c).GetValue(_newUser));
 
             File.AppendAllText(_standardPath, Environment.NewLine + string.Join(",", csvUser));
         }
