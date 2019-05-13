@@ -7,9 +7,7 @@ namespace Challenges.WC2
 {
     public class ReadAndWriteFile
     {
-        private const string AdvancedPath = "./WC2/AdvancedDataSet.csv";
-
-        private const string StandardPath = "./WC2/StandardDataSet.csv";
+        private readonly string _advancedPath = "WC2/AdvancedDataSet.csv".ToApplicationPath();
 
         private readonly User _newUser = new User
         {
@@ -19,6 +17,9 @@ namespace Challenges.WC2
             LastName = "Song"
         };
 
+        private readonly string _standardPath =
+            "WC2/StandardDataSet.csv".ToApplicationPath();
+
 
         private readonly List<User> _usersModel = new List<User>();
 
@@ -27,6 +28,7 @@ namespace Challenges.WC2
         private List<string> _headers = new List<string>();
 
         private List<string> _users = new List<string>();
+
 
         public void ReadFile()
         {
@@ -42,7 +44,7 @@ namespace Challenges.WC2
 
             var csvUser = _headers.Select(c => _newUser.GetType().GetProperty(c).GetValue(_newUser));
 
-            File.AppendAllText(StandardPath, Environment.NewLine + string.Join(",", csvUser));
+            File.AppendAllText(_standardPath, Environment.NewLine + string.Join(",", csvUser));
         }
 
         public void PrintOut() => _usersModel.ForEach(c => Console.WriteLine(c.DisplayText));
@@ -73,7 +75,7 @@ namespace Challenges.WC2
             _usersModel.Add(user);
         }
 
-        private void GetData() => _data = File.ReadAllLines(StandardPath).ToList();
+        private void GetData() => _data = File.ReadAllLines(_standardPath).ToList();
 
         private void GetHeaders() => _headers = _data.First().Split(",").ToList();
 
