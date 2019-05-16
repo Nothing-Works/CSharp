@@ -1,4 +1,4 @@
-﻿using Challenges.WC2;
+﻿using Challenges.Csharp7;
 
 namespace Challenges
 {
@@ -6,11 +6,9 @@ namespace Challenges
     {
         private static void Main()
         {
-            var c = new ReadAndWriteFile();
-            c.ReadFile();
-            c.PrintOut();
-            c.WriteFile();
-            c.ReadFile();
+            var c = new CSharp7();
+            c.OutVar();
+            c.PatternMatching();
         }
     }
 }
