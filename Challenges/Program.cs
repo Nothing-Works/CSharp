@@ -9,6 +9,7 @@ namespace Challenges
             var c = new CSharp7();
             c.OutVar();
             c.PatternMatching();
+            c.PrintTuples();
         }
     }
 }

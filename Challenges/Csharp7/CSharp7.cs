@@ -33,5 +33,14 @@ namespace Challenges.Csharp7
 
             if (input is int i) Console.WriteLine(i);
         }
+
+        private (int, int) Tuples1((int, int) tuple) => (tuple.Item1 * 2, tuple.Item2 * 2);
+
+        public void PrintTuples()
+        {
+            var (resultA, resultB) = Tuples1((100, 200));
+            Console.WriteLine(resultA);
+            Console.WriteLine(resultB);
+        }
     }
 }
