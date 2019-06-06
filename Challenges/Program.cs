@@ -1,4 +1,4 @@
-﻿using Challenges.Csharp7;
+﻿using Challenges.WC6;
 
 namespace Challenges
 {
@@ -6,10 +6,8 @@ namespace Challenges
     {
         private static void Main()
         {
-            var c = new CSharp7();
-            c.OutVar();
-            c.PatternMatching();
-            c.PrintTuples();
+            var c = new DotnetDataTime();
+            c.Start();
         }
     }
 }
