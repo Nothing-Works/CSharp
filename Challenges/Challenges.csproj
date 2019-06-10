@@ -11,4 +11,8 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CSharpIND4" />
+  </ItemGroup>
+
 </Project>
