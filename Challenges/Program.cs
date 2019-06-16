@@ -1,4 +1,4 @@
-﻿using Challenges.WC6;
+﻿using Challenges.CSharpIND3.part1;
 
 namespace Challenges
 {
@@ -6,8 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            var c = new DotnetDataTime();
-            c.Start();
+            ProductNameCompareCSharp3.SortIt();
         }
     }
 }
