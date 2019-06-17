@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            ProductNameCompareCSharp3.SortIt();
+            QueryingCSharp3.QueryIt();
         }
     }
 }
