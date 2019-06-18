@@ -1,10 +1,10 @@
 ﻿namespace Challenges.CSharpIND3.CSharp1.DelegateExample
 {
+    //1. declare delegate type
+    delegate string GiveMeTheString(string s);
+
     class DelegateSample
     {
-        //1. declare delegate type
-        delegate string GiveMeTheString(string s);
-
         //2. create a method
         string DoesNothing(string s)
         {

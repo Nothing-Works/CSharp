@@ -1,4 +1,4 @@
-﻿using Challenges.CSharpIND3.part1;
+﻿using Challenges.CSharpIND3.CSharp1.DelegateExample;
 
 namespace Challenges
 {
@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            QueryingCSharp3.QueryIt();
+            SimpleDelegateUse.Test();
         }
     }
 }
