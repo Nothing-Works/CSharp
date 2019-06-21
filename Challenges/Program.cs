@@ -1,4 +1,4 @@
-﻿using Challenges.CSharpIND3.CSharp1.DelegateExample;
+﻿using Challenges.CSharpIND4.CSharp2.Generics;
 
 namespace Challenges
 {
@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            SimpleDelegateUse.Test();
+            BeforeGenerics.PrintNamesSC(BeforeGenerics.GenerateNamesSC());
         }
     }
 }
