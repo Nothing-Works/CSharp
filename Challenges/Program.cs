@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            GenericsCountWords.HowMany();
+            GenericsConvert.PrintConverted();
         }
     }
 }
