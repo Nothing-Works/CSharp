@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            BeforeGenerics.PrintNamesSC(BeforeGenerics.GenerateNamesSC());
+            UsingGenerics.CopyWithGenerics();
         }
     }
 }
