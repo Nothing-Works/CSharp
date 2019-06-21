@@ -1,4 +1,4 @@
-﻿using Challenges.CSharpIND4.CSharp2.Generics;
+﻿using Challenges.CSharpIND3.CSharp2.Generics;
 
 namespace Challenges
 {
@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            UsingGenerics.CopyWithGenerics();
+            GenericsCountWords.HowMany();
         }
     }
 }
