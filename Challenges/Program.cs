@@ -1,4 +1,4 @@
-﻿using Challenges.CSharpIND3.CSharp2.Generics;
+﻿using Challenges.CSharpIND4.CSharp2.Nullable;
 
 namespace Challenges
 {
@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            GenericsConvert.PrintConverted();
+            NullableExamples.Display();
         }
     }
 }
