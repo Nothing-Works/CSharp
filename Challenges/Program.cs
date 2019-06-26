@@ -1,4 +1,5 @@
-﻿using Challenges.CSharpIND4.CSharp2.Nullable;
+﻿using Challenges.CSharpIND4.CSharp2.Delegates;
+using Challenges.CSharpIND4.CSharp2.Nullable;
 
 namespace Challenges
 {
@@ -7,6 +8,7 @@ namespace Challenges
         private static void Main()
         {
             NullableExamples.Display();
+            new DelegatesFrom1To2().Go3();
         }
     }
 }
