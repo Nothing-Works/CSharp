@@ -5,6 +5,8 @@ namespace Challenges.CSharpIND3.CSharp2.Anonymous
 {
     public class AnonymousExample
     {
+        Predicate<int> isEven = delegate(int i) { return i % 2 == 0; };
+
         Action<string> printReverse = delegate(string s)
         {
             char[] chars = s.ToCharArray();
@@ -45,6 +47,8 @@ namespace Challenges.CSharpIND3.CSharp2.Anonymous
             printReverse("Andy");
             printRoot(2);
             printMean(new double[] { 1.2, 2.4, 4, 42.2 });
+            Console.WriteLine(isEven(1));
+            Console.WriteLine(isEven(2));
         }
     }
 }
