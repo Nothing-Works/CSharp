@@ -1,4 +1,5 @@
-﻿using Challenges.CSharpIND3.CSharp2.Anonymous;
+﻿using Challenges.CSharpIND3.CSharp1;
+using System;
 
 namespace Challenges
 {
@@ -6,7 +7,12 @@ namespace Challenges
     {
         private static void Main()
         {
-            CapturedVariables.Go();
+            var iterable = new IterationSample(3, new object[] { "a", "b", "c", "d", "e" });
+
+            foreach (object o in iterable)
+            {
+                Console.WriteLine(o);
+            }
         }
     }
 }
