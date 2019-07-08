@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            IteratorsExample.PrintFibonacci();
+            new FinallyBlocks().PrintTwo();
         }
     }
 }
