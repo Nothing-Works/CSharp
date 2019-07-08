@@ -6,7 +6,7 @@ namespace Challenges
     {
         private static void Main()
         {
-            new YieldExample().Example();
+            new YieldDate().Example();
         }
     }
 }

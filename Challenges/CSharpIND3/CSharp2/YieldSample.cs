@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Challenges.CSharpIND3.CSharp2
 {
@@ -45,6 +46,32 @@ namespace Challenges.CSharpIND3.CSharp2
 
                 Console.WriteLine("Fetching Current....");
                 Console.WriteLine("... Current result = {0}", iterator.Current);
+            }
+        }
+    }
+
+    public class YieldDate
+    {
+        public IEnumerable<int> CountWithTimeLimit(DateTime limit)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                if (DateTime.Now >= limit)
+                {
+                    yield break;
+                }
+
+                yield return i;
+            }
+        }
+
+        public void Example()
+        {
+            DateTime stop = DateTime.Now.AddSeconds(2);
+            foreach (int i in CountWithTimeLimit(stop))
+            {
+                Console.WriteLine("Received {0}", i);
+                Thread.Sleep(300);
             }
         }
     }
