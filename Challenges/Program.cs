@@ -1,4 +1,5 @@
-﻿using Challenges.CSharpIND3.CSharp2;
+﻿using Challenges.CSharpIND4.CSharp2.Iterators;
+using System;
 
 namespace Challenges
 {
@@ -6,7 +7,10 @@ namespace Challenges
     {
         private static void Main()
         {
-            new YieldDate().Example();
+            foreach (int i in IteratorsExample.SampleOne())
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }

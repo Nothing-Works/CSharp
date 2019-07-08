@@ -11,8 +11,4 @@
     </Reference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CSharpIND4\CSharp2\Iterators\" />
-  </ItemGroup>
-
 </Project>
