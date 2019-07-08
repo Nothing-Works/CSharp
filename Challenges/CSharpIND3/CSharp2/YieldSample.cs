@@ -54,14 +54,21 @@ namespace Challenges.CSharpIND3.CSharp2
     {
         public IEnumerable<int> CountWithTimeLimit(DateTime limit)
         {
-            for (int i = 0; i < 100; i++)
+            try
             {
-                if (DateTime.Now >= limit)
+                for (int i = 0; i < 100; i++)
                 {
-                    yield break;
-                }
+                    if (DateTime.Now >= limit)
+                    {
+                        yield break;
+                    }
 
-                yield return i;
+                    yield return i;
+                }
+            }
+            finally
+            {
+                Console.WriteLine("stopping");
             }
         }
 
@@ -71,6 +78,12 @@ namespace Challenges.CSharpIND3.CSharp2
             foreach (int i in CountWithTimeLimit(stop))
             {
                 Console.WriteLine("Received {0}", i);
+                if (i > 3)
+                {
+                    Console.WriteLine("returning");
+                    return;
+                }
+
                 Thread.Sleep(300);
             }
         }
