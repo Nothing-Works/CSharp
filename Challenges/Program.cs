@@ -1,4 +1,6 @@
 ﻿using Challenges.CSharpIND4.CSharp2.Iterators;
+using Challenges.CSharpIND4.CSharp3.ObjectInitializer;
+using System;
 
 namespace Challenges
 {
@@ -7,6 +9,8 @@ namespace Challenges
         private static void Main()
         {
             new FinallyBlocks().PrintTwo();
+            var a = new ProcessOrder().Process();
+            Console.WriteLine(a.Customer.Name);
         }
     }
 }
