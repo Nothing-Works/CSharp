@@ -1,4 +1,5 @@
 ﻿using Challenges.CSharpIND3.CSharp3.ExpressionTree;
+using Challenges.CSharpIND3.CSharp3.IEnumerableExample;
 using Challenges.CSharpIND4.CSharp2.Iterators;
 using Challenges.CSharpIND4.CSharp3.ObjectInitializer;
 using System;
@@ -13,6 +14,7 @@ namespace Challenges
             var a = new ProcessOrder().Process();
             Console.WriteLine(a.Customer.Name);
             new Example().Test();
+            new ExampleMethods().Test();
         }
     }
 }
