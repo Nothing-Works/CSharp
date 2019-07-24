@@ -14,6 +14,8 @@ namespace Challenges.CSharpIND4.CSharp3.ExtensionMethods
                 .OrderBy(c => c)
                 .Select(c => c.ToUpper());
 
+            
+
             foreach (string s in query)
             {
                 Console.WriteLine(s);
