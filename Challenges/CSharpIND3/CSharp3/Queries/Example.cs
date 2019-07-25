@@ -86,6 +86,29 @@ namespace Challenges.CSharpIND3.CSharp3.Queries
 
         public void CrossJoin()
         {
+            var query = from user in SampleData.AllUsers
+                from project in SampleData.AllProjects
+                select new { User = user, Project = project };
+            foreach (var q in query)
+            {
+                Console.WriteLine("{0}/{1}", q.User.Name, q.Project.Name);
+            }
+
+
+            var query3 = SampleData.AllUsers.SelectMany(c => SampleData.AllProjects,
+                (user, project) => new { User = user, Project = project });
+
+            var query1 = from left in Enumerable.Range(1, 4)
+                from right in Enumerable.Range(11, left)
+                select new { Left = left, Right = right };
+
+            foreach (var q in query1)
+            {
+                Console.WriteLine("Left={0}; Right={1}", q.Left, q.Right);
+            }
+
+            var query2 = Enumerable.Range(1, 4).SelectMany(left => Enumerable.Range(11, left),
+                (left, right) => new { Left = left, Right = right });
         }
     }
 }

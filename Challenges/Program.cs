@@ -15,7 +15,7 @@ namespace Challenges
             Console.WriteLine(a.Customer.Name);
             new Example().Test();
             new ExampleMethods().Test();
-            new CSharpIND3.CSharp3.Queries.Example().GroupJoin();
+            new CSharpIND3.CSharp3.Queries.Example().CrossJoin();
         }
     }
 }
