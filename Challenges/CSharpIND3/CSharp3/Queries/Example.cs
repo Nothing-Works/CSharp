@@ -117,7 +117,26 @@ namespace Challenges.CSharpIND3.CSharp3.Queries
                 where defect.AssignedTo != null
                 group defect by defect.AssignedTo;
 
+            var query2 = from defect in SampleData.AllDefects
+                where defect.AssignedTo != null
+                group defect.Summary by defect.AssignedTo;
+
+            foreach (var entry in query2)
+            {
+                Console.WriteLine(entry.Key.Name);
+                foreach (var summary in entry)
+                {
+                    Console.WriteLine("{0}",
+                        summary);
+                }
+
+                Console.WriteLine();
+            }
+
+
             var query1 = SampleData.AllDefects.Where(c => c.AssignedTo != null).GroupBy(c => c.AssignedTo);
+            var query3 = SampleData.AllDefects.Where(c => c.AssignedTo != null)
+                .GroupBy(c => c.AssignedTo, c => c.Summary);
 
             foreach (var entry in query)
             {
@@ -129,6 +148,45 @@ namespace Challenges.CSharpIND3.CSharp3.Queries
                 }
 
                 Console.WriteLine();
+            }
+        }
+
+        public void Continuations()
+        {
+            var query = from defect in SampleData.AllDefects
+                where defect.AssignedTo != null
+                group defect by defect.AssignedTo
+                into grouped
+                select new { Assignee = grouped.Key, Count = grouped.Count() };
+
+
+            var query1 = from grouped in (from defect in SampleData.AllDefects
+                    where defect.AssignedTo != null
+                    group defect by defect.AssignedTo)
+                select new { Assignee = grouped.Key, Count = grouped.Count() };
+
+            var query3 = SampleData.AllDefects.Where(c => c.AssignedTo != null).GroupBy(c => c.AssignedTo)
+                .Select(c => new { Assignee = c.Key, Count = c.Count() });
+
+
+            var query4 = from defect in SampleData.AllDefects
+                where defect.AssignedTo != null
+                group defect by defect.AssignedTo
+                into grouped
+                select new { Assignee = grouped.Key, Count = grouped.Count() }
+                into result
+                orderby result.Count descending
+                select result;
+
+            var query5 = SampleData.AllDefects
+                .Where(c => c.AssignedTo != null)
+                .GroupBy(c => c.AssignedTo)
+                .Select(c => new { Assignee = c.Key, Count = c.Count() })
+                .OrderByDescending(c => c.Count);
+
+            foreach (var entry in query)
+            {
+                Console.WriteLine("{0}: {1}", entry.Assignee, entry.Count);
             }
         }
     }
