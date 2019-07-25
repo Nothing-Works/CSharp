@@ -110,5 +110,26 @@ namespace Challenges.CSharpIND3.CSharp3.Queries
             var query2 = Enumerable.Range(1, 4).SelectMany(left => Enumerable.Range(11, left),
                 (left, right) => new { Left = left, Right = right });
         }
+
+        public void Group()
+        {
+            var query = from defect in SampleData.AllDefects
+                where defect.AssignedTo != null
+                group defect by defect.AssignedTo;
+
+            var query1 = SampleData.AllDefects.Where(c => c.AssignedTo != null).GroupBy(c => c.AssignedTo);
+
+            foreach (var entry in query)
+            {
+                Console.WriteLine(entry.Key.Name);
+                foreach (var defect in entry)
+                {
+                    Console.WriteLine("({0}) {1}",
+                        defect.Severity, defect.Summary);
+                }
+
+                Console.WriteLine();
+            }
+        }
     }
 }
