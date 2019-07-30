@@ -3,6 +3,7 @@ using Challenges.CSharpIND3.CSharp3.IEnumerableExample;
 using Challenges.CSharpIND4.CSharp2.Iterators;
 using Challenges.CSharpIND4.CSharp3.ObjectInitializer;
 using System;
+using Challenges.CSharpIND3.CSharp4.MinorChanges;
 
 namespace Challenges
 {
@@ -16,6 +17,7 @@ namespace Challenges
             new Example().Test();
             new ExampleMethods().Test();
             new CSharpIND3.CSharp3.Queries.Example().Continuations();
+            new Example1().Go();
         }
     }
 }
