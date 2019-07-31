@@ -4,6 +4,13 @@ namespace Challenges.CSharpIND4.CSharp4
 {
     public class Dynamic4
     {
+        public void CallDynamic()
+        {
+            dynamic example = new SimpleDynamicExample();
+            example.CallSomeMethod("x", 10);
+            Console.WriteLine(example.SomeProperty);
+        }
+
         public void Go()
         {
             dynamic text = "hello world";
