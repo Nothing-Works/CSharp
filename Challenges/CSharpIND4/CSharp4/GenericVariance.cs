@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Challenges.CSharpIND4.CSharp4
 {
@@ -26,6 +27,19 @@ namespace Challenges.CSharpIND4.CSharp4
             //will not work. as IList can do both input and output, whereas IEnumerable can only do output.
             //IList<string> lists = new List<string> { "a", "b", "c" };
             //IList<object> list1 = lists;
+        }
+
+
+        public void Example()
+        {
+            //before
+
+            IEnumerable<string> strigns = new[] { "a", "b", "cdefg", "hij" };
+            List<object> list = strigns.Where(c => c.Length > 1).Cast<object>().ToList();
+
+            //after
+            IEnumerable<string> strings1 = new[] { "a", "b", "cdefg", "hij" };
+            List<object> list1 = strings1.Where(c => c.Length > 1).ToList<object>();
         }
     }
 }
