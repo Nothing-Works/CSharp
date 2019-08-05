@@ -11,4 +11,9 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CSharpIND3\CSharp5\" />
+    <Folder Include="CSharpIND4\CSharp5\" />
+  </ItemGroup>
+
 </Project>
