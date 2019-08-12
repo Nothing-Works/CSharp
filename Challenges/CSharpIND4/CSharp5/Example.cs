@@ -8,9 +8,10 @@ namespace Challenges.CSharpIND4.CSharp5
     {
         private readonly HttpClient client = new HttpClient();
 
-        public async Task Async()
+        public void Async()
         {
-            Console.WriteLine(await Fetch());
+            Task<string> result = Fetch();
+            Console.WriteLine(result.Result);
         }
 
         private async Task<string> Fetch()
