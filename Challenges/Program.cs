@@ -22,6 +22,8 @@ namespace Challenges
             new Example1().Go();
             new DT().GO();
             new Dynamic4().CallDynamic();
+            new CSharpIND3.CSharp5.Example().Sync();
+            Console.ReadLine();
         }
     }
 }
