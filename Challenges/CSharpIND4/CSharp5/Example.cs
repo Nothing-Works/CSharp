@@ -16,7 +16,8 @@ namespace Challenges.CSharpIND4.CSharp5
         private async Task<string> Fetch()
         {
             Console.WriteLine("Fecthing");
-            var result = await client.GetStringAsync("https://csharpindepth.com/");
+            Task<string> task = client.GetStringAsync("https://csharpindepth.com/");
+            string result = await task;
             return result;
         }
     }
