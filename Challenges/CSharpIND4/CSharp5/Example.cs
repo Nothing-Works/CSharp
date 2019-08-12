@@ -21,5 +21,10 @@ namespace Challenges.CSharpIND4.CSharp5
             string result = await task;
             return result;
         }
+
+        private Task<int> Test()
+        {
+            return Task.Run(() => 1);
+        }
     }
 }
