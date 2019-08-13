@@ -8,6 +8,14 @@ namespace Challenges.CSharpIND4.CSharp5
     {
         private readonly HttpClient client = new HttpClient();
 
+        Func<Task> lambda = async () => await Task.Delay(3000);
+
+        Func<Task<int>> lambdaInt = async delegate()
+        {
+            await Task.Delay(3000);
+            return 1;
+        };
+
         public void Async()
         {
             Task<string> result = Fetch();
