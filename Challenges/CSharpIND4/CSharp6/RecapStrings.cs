@@ -12,5 +12,14 @@ namespace Challenges.CSharpIND4.CSharp6
 
             var name1 = string.Format("Hello, {0}!", name);
         }
+
+        public void Money()
+        {
+            decimal price = 95.25m;
+            decimal tip = price * 0.2m;
+            Console.WriteLine("Price: {0,9:c}", price);
+            Console.WriteLine("Tip: {0,9:c}", tip);
+            Console.WriteLine("Total: {0,9:c}", tip + price);
+        }
     }
 }
