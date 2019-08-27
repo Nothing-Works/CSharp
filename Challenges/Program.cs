@@ -7,6 +7,7 @@ using Challenges.CSharpIND4.CSharp3.ObjectInitializer;
 using Challenges.CSharpIND4.CSharp4;
 using System;
 using System.Globalization;
+using Challenges.CSharpIND4.CSharp6;
 
 namespace Challenges
 {
@@ -46,6 +47,7 @@ namespace Challenges
             string s = $"Price: {price,9:c}";
             var another = s.ToString(culture);
             Console.WriteLine(another);
+            new NameOfExample().Test();
         }
     }
 }
