@@ -6,6 +6,7 @@ using Challenges.CSharpIND4.CSharp2.Iterators;
 using Challenges.CSharpIND4.CSharp3.ObjectInitializer;
 using Challenges.CSharpIND4.CSharp4;
 using System;
+using System.Globalization;
 
 namespace Challenges
 {
@@ -25,6 +26,26 @@ namespace Challenges
             new CSharpIND3.CSharp5.Example().Sync();
             new CSharpIND4.CSharp5.Example().Async();
             Console.ReadLine();
+
+            DateTime date = DateTime.UtcNow;
+            string parameter2 =
+                ((FormattableString) $"x={date:yyyy-MM-dd}")
+                .ToString(CultureInfo.InvariantCulture);
+            string parameter1 =
+                $"x={date:yyyy-MM-dd}"
+                    .ToString(CultureInfo.InvariantCulture);
+
+
+            var culture = CultureInfo.GetCultureInfo("en-GB");
+            decimal price = 95.25m;
+
+            FormattableString formattableString = $"Price: {price,9:c}";
+            var result = formattableString.ToString(culture);
+            Console.WriteLine(result);
+
+            string s = $"Price: {price,9:c}";
+            var another = s.ToString(culture);
+            Console.WriteLine(another);
         }
     }
 }
