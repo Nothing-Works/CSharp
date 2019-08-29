@@ -5,9 +5,9 @@ using Challenges.CSharpIND3.CSharp4.MinorChanges;
 using Challenges.CSharpIND4.CSharp2.Iterators;
 using Challenges.CSharpIND4.CSharp3.ObjectInitializer;
 using Challenges.CSharpIND4.CSharp4;
+using Challenges.CSharpIND4.CSharp6;
 using System;
 using System.Globalization;
-using Challenges.CSharpIND4.CSharp6;
 
 namespace Challenges
 {
@@ -15,6 +15,8 @@ namespace Challenges
     {
         private static void Main()
         {
+            //new ExceptionFilters().Test();
+            new ExceptionFilters().Go();
             new FinallyBlocks().PrintTwo();
             var a = new ProcessOrder().Process();
             Console.WriteLine(a.Customer.Name);
