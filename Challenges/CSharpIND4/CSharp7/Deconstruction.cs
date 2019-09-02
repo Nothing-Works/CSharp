@@ -11,6 +11,7 @@ namespace Challenges.CSharpIND4.CSharp7
 
         public void Test()
         {
+            (string text, Func<int, int> func) = (null, x => x * 2);
             //example of discards
             var tupleDiscards = (1, 2, 3, 4, 5, 6);
 
