@@ -1,0 +1,7 @@
+﻿namespace Challenges.CSharpIND4.CSharp7.BaseClasses
+{
+    public class Rectangle : Shape
+    {
+        public override double Area { get; }
+    }
+}
