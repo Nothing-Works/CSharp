@@ -45,5 +45,35 @@ namespace Challenges.CSharpIND4.CSharp7
                         $"Shape type {shape.GetType()} perimeter unknown", nameof(shape));
             }
         }
+
+        public void ConstantPattern(object input)
+        {
+            if (input is "hello")
+                Console.WriteLine("Input is string hello");
+            if (input is 5L)
+                Console.WriteLine("Input is long 5");
+            if (input is 10)
+                Console.WriteLine("Input is int 10");
+            else
+                Console.WriteLine("Input didn't match hello, long 5 or int 10");
+        }
+
+        public string TypePattern(Shape shape)
+        {
+            if (shape == null)
+                throw new ArgumentNullException(nameof(shape));
+
+            if (shape is Rectangle rec)
+                return "rect";
+
+            if (shape is Circle circle)
+                return "circle";
+
+            if (shape is Triangle tri)
+                return "Triangle";
+
+            throw new ArgumentException(
+                $"Shape type {shape.GetType()} perimeter unknown", nameof(shape));
+        }
     }
 }
