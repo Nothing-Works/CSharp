@@ -51,7 +51,7 @@ namespace Challenges
             var another = s.ToString(culture);
             Console.WriteLine(another);
             new NameOfExample().Test();
-            new Output().Example();
+            new Output().Example1();
         }
     }
 }
