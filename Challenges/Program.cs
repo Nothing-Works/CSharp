@@ -8,6 +8,7 @@ using Challenges.CSharpIND4.CSharp4;
 using Challenges.CSharpIND4.CSharp6;
 using System;
 using System.Globalization;
+using Challenges.Practice.Part1;
 
 namespace Challenges
 {
@@ -50,6 +51,7 @@ namespace Challenges
             var another = s.ToString(culture);
             Console.WriteLine(another);
             new NameOfExample().Test();
+            new Output().Example();
         }
     }
 }
